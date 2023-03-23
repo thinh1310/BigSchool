@@ -42,10 +42,10 @@ namespace BigSchool.Controllers
                 }
                 var course = new Course
             {
-                lecturnerId = User.Identity.GetUserId(),
-                datetime = viewModel.GetDateTime(),
+                LecturerId = User.Identity.GetUserId(),
+                Datetime = viewModel.GetDateTime(),
                 CategoryId = viewModel.Category,
-                place = viewModel.Place
+                Place = viewModel.Place
             };
             _dbContext.Courses.Add(course);
             _dbContext.SaveChanges();
