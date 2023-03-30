@@ -182,9 +182,13 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AddtendancesController.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\FollowingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DTOs\AttendanceDto.cs" />
+    <Compile Include="DTOs\FollowingDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -192,19 +196,30 @@
     <Compile Include="Migrations\202303230242379_FixDB.designer.cs">
       <DependentUpon>202303230242379_FixDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303230403264_kkk.cs" />
-    <Compile Include="Migrations\202303230403264_kkk.designer.cs">
-      <DependentUpon>202303230403264_kkk.cs</DependentUpon>
+    <Compile Include="Migrations\202303290336555_AddAttendance.cs" />
+    <Compile Include="Migrations\202303290336555_AddAttendance.designer.cs">
+      <DependentUpon>202303290336555_AddAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303290611230_haha.cs" />
+    <Compile Include="Migrations\202303290611230_haha.designer.cs">
+      <DependentUpon>202303290611230_haha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303291741044_AddFollowingTable.cs" />
+    <Compile Include="Migrations\202303291741044_AddFollowingTable.designer.cs">
+      <DependentUpon>202303291741044_AddFollowingTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Attendance.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\ApllicationUser.cs" />
+    <Compile Include="Models\Following.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CoursesViewModel.cs" />
     <Compile Include="ViewModels\CouseViewModel.cs" />
     <Compile Include="ViewModels\FutureDate.cs" />
     <Compile Include="ViewModels\ValidTime.cs" />
@@ -278,6 +293,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="NewFolder1\" />
+    <Folder Include="NewFolder2\" />
+    <Folder Include="Views\Following\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -288,8 +305,14 @@
     <EmbeddedResource Include="Migrations\202303230242379_FixDB.resx">
       <DependentUpon>202303230242379_FixDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202303230403264_kkk.resx">
-      <DependentUpon>202303230403264_kkk.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303290336555_AddAttendance.resx">
+      <DependentUpon>202303290336555_AddAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303290611230_haha.resx">
+      <DependentUpon>202303290611230_haha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303291741044_AddFollowingTable.resx">
+      <DependentUpon>202303291741044_AddFollowingTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
